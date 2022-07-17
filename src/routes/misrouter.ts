@@ -11,9 +11,10 @@ export class MisRoutes {
   }
 
   routes() {
-    this.router.get('/user', this.userController.getTest);
-    this.router.post('/user', this.userController.saveTest);
-    this.router.put('/user', this.userController.updateTest);
-    this.router.delete('/user', this.userController.deleteTest);
+    this.router.get('/user', this.userController.getAllUsers);
+    this.router.get('/user/:id', this.userController.getOneById);
+    this.router.post('/user', this.userController.registerUser);
+    this.router.put('/user/:id', this.userController.updateUser);
+    this.router.delete('/user/:id', this.userController.deleteUser);
   }
 }
